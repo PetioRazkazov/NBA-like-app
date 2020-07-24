@@ -18,8 +18,8 @@ router.route('/add').post((req,res)=>{
 
     newLink.save().then(()=> res.json('Link added')).catch(err => res.status(400).json('Error' + err));
 });
-router.route('/random').get((req,res)=>{
-    Link.find({idNumber: req.body.idNumber})
+router.route('/random/:id').get((req,res)=>{
+    Link.find({idNumber: req.params.id})
     .then(links => res.json(links))
     .catch(err => res.status(400).json('Error:' + err));
 });

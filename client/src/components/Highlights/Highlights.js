@@ -9,10 +9,13 @@ class Hightlights extends React.Component{
     constructor(props) {
         super(props);
         // Don't call this.setState() here!
-        this.state = { url: '',id: 1};
-        axios.get('http://localhost:5000/links/').then(function(res){
+        this.state = { url: ''};
+      }
+       componentDidMount(){
+           let currentComponent = this;
+            axios.get('http://localhost:5000/links/').then(function(res){
                 let rand = Math.floor(Math.random() * Object.keys(res.data).length +1);
-                axios.get('http://localhost:5000/links/random',{params: {id:rand}}).then(result => this.setState({url: result.data[rand].url}));             
+                axios.get(`http://localhost:5000/links/random/${rand}`).then(result => currentComponent.setState({url : result.data[0].url}));             
             });
       }
     render(){
@@ -40,7 +43,7 @@ class Hightlights extends React.Component{
                 </Nav>
                 <div className = 'video'>
                     <iframe height="680" width="900"  
-                    src="https://www.youtube.com/embed/DsxxgJTXr8Y"> 
+                    src={"https://www.youtube.com/embed/" + this.state.url}> 
                     </iframe>
                 </div>
                 <h1 className = 'hightlight'>New Nba Hightlight Ready On Every Reload</h1>
