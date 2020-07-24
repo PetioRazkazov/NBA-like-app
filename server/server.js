@@ -20,8 +20,10 @@ connection.once('open', () =>{
 
 const usersRouter = require('./routes/users');
 const linkRouter = require('./routes/links');
+const articlesRouter = require('./routes/articles');
 
 app.use('/users',usersRouter);
 app.use('/links',linkRouter);
+app.use('/articles',articlesRouter);
 
 app.listen(PORT,() =>console.log('Server started on port:' + PORT));

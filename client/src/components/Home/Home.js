@@ -19,7 +19,7 @@ function Login(){
                 console.log(lengthOfData.data.length);
                 for(let i = 0; i<lengthOfData.data.length; i++){
                     if(userName === lengthOfData.data[i].username && password === lengthOfData.data[i].password){
-                        setAuthTokens(result.data);
+                        setAuthTokens(result.data[i]);
                         setLoggedIn(true);
                     }
                 }        

@@ -7,7 +7,9 @@ import Main from './components/Main/MainPage.js';
 import PrivateRoute from './components/privateRoute.js';
 import {AuthContext} from "./components/context/auth.js";
 import Information from "./components/Main/Info.js";
-import Highlights from "./components/Highlights/Highlights.js"
+import Highlights from "./components/Highlights/Highlights.js";
+import Articles from "./components/Articles/Articles.js";
+
 function App(props){
 
     const existingTokens = JSON.parse(localStorage.getItem("tokens"));
@@ -25,6 +27,7 @@ function App(props){
             <PrivateRoute path = '/main' exact component = {Main} />
             <PrivateRoute path = '/moreInfo' exact component = {Information} />
             <PrivateRoute path = '/highlights' exact component = {Highlights} />
+            <PrivateRoute path = '/articles' exact component = {Articles} />
         </Router>
     </AuthContext.Provider>
   )

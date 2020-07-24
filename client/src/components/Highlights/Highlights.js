@@ -8,8 +8,7 @@ class Hightlights extends React.Component{
 
     constructor(props) {
         super(props);
-        // Don't call this.setState() here!
-        this.state = { url: ''};
+        this.state = {url: ''};
       }
        componentDidMount(){
            let currentComponent = this;
@@ -35,7 +34,7 @@ class Hightlights extends React.Component{
                         <Nav.Link href="/highlights">Highlights</Nav.Link>
                     </Nav.Item>
                         <Nav.Item>
-                        <Nav.Link eventKey="link-2">Articles</Nav.Link>
+                        <Nav.Link href="/articles">Articles</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
                         <Nav.Link eventKey="link-2">Polls</Nav.Link>

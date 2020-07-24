@@ -26,7 +26,7 @@ class Main extends React.Component{
                         <Nav.Link href="/highlights">Highlights</Nav.Link>
                     </Nav.Item>
                         <Nav.Item>
-                        <Nav.Link eventKey="link-2">Articles</Nav.Link>
+                        <Nav.Link href="/articles">Articles</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
                         <Nav.Link eventKey="link-2">Polls</Nav.Link>
