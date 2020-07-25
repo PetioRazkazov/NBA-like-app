@@ -9,6 +9,7 @@ import {AuthContext} from "./components/context/auth.js";
 import Information from "./components/Main/Info.js";
 import Highlights from "./components/Highlights/Highlights.js";
 import Articles from "./components/Articles/Articles.js";
+import Polls from "./components/Polls/Polls.js";
 
 function App(props){
 
@@ -28,6 +29,7 @@ function App(props){
             <PrivateRoute path = '/moreInfo' exact component = {Information} />
             <PrivateRoute path = '/highlights' exact component = {Highlights} />
             <PrivateRoute path = '/articles' exact component = {Articles} />
+            <PrivateRoute path = '/polls' exact component = {Polls} />
         </Router>
     </AuthContext.Provider>
   )

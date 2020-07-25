@@ -37,7 +37,7 @@ class Hightlights extends React.Component{
                         <Nav.Link href="/articles">Articles</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                        <Nav.Link eventKey="link-2">Polls</Nav.Link>
+                        <Nav.Link href="/polls">Polls</Nav.Link>
                     </Nav.Item>
                 </Nav>
                 <div className = 'video'>
